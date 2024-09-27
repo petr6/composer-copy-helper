@@ -2,7 +2,12 @@
 
 namespace App\Http\Controllers;
 
-abstract class Controller
+use Illuminate\View\View;
+
+class Controller
 {
-    //
+    public function index(): View
+    {
+        return view('welcome');
+    }
 }
