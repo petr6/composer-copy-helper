@@ -12,15 +12,18 @@ class CopyEventListener
     public function handle(CopyEvent $event): void
     {
         $folders = [
-            'C:\wamp64\www\eshop-v2.1.x' => 'C:\wamp64\www\flumasys\vendor\liquiddesign\eshop',
+            ['C:\wamp64\www\eshop-v2.1.x\src','C:\wamp64\www\abel\vendor\liquiddesign\eshop\src',],
+            ['C:\wamp64\www\eshop-v2.1.x\src','C:\wamp64\www\rajtiskaren\vendor\liquiddesign\eshop\src',],
+            ['C:\wamp64\www\abel-base-v1.x\src','C:\wamp64\www\abel\vendor\liquiddesign\abel-base\src',],
+            ['C:\wamp64\www\abel-base-v1.x\src','C:\wamp64\www\rajtiskaren\vendor\liquiddesign\abel-base\src',],
         ];
 
-        foreach ($folders as $sourceSubFolder => $targetSubFolder) {
-            if (! \is_dir($targetSubFolder) || ! \is_dir($sourceSubFolder)) {
+        foreach ($folders as $subFolders) {
+            if (! \is_dir($subFolders[0]) || ! \is_dir($subFolders[1])) {
                 continue;
             }
 
-            \exec("Robocopy.exe $sourceSubFolder $targetSubFolder /mir");
+            \exec("Robocopy.exe $subFolders[0] $subFolders[1] /mir");
         }
 
         Notification::title('Composer Copy Helper')

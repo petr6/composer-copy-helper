@@ -15,7 +15,7 @@ class NativeAppServiceProvider implements ProvidesPhpIni
      */
     public function boot(): void
     {
-        GlobalShortcut::key('CmdOrCtrl+Shift+A')
+        GlobalShortcut::key('CmdOrCtrl+Alt+Y')
             ->event(CopyEvent::class)
             ->register();
 
