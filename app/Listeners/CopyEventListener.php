@@ -14,6 +14,7 @@ class CopyEventListener
         $folders = [
             ['C:\wamp64\www\eshop-v2.1.x\src','C:\wamp64\www\abel\vendor\liquiddesign\eshop\src',],
             ['C:\wamp64\www\eshop-v2.1.x\src','C:\wamp64\www\rajtiskaren\vendor\liquiddesign\eshop\src',],
+            ['C:\wamp64\www\eshop-v2.1.x\src','C:\wamp64\www\abel-base-v1.x\vendor\liquiddesign\eshop\src',],
             ['C:\wamp64\www\abel-base-v1.x\src','C:\wamp64\www\abel\vendor\liquiddesign\abel-base\src',],
             ['C:\wamp64\www\abel-base-v1.x\src','C:\wamp64\www\rajtiskaren\vendor\liquiddesign\abel-base\src',],
         ];
