@@ -15,6 +15,8 @@ class CopyEventListener
             ['C:\wamp64\www\eshop-v2.1.x\src','C:\wamp64\www\abel\vendor\liquiddesign\eshop\src',],
             ['C:\wamp64\www\eshop-v2.1.x\src','C:\wamp64\www\rajtiskaren\vendor\liquiddesign\eshop\src',],
             ['C:\wamp64\www\eshop-v2.1.x\src','C:\wamp64\www\abel-base-v1.x\vendor\liquiddesign\eshop\src',],
+            ['C:\wamp64\www\eshop-v2.1.x\src','C:\wamp64\www\lindemh\vendor\liquiddesign\eshop\src',],
+            ['C:\wamp64\www\admin\src','C:\wamp64\www\abel\vendor\liquiddesign\admin\src',],
             ['C:\wamp64\www\abel-base-v1.x\src','C:\wamp64\www\abel\vendor\liquiddesign\abel-base\src',],
             ['C:\wamp64\www\abel-base-v1.x\src','C:\wamp64\www\rajtiskaren\vendor\liquiddesign\abel-base\src',],
         ];
@@ -25,6 +27,7 @@ class CopyEventListener
             }
 
             \exec("Robocopy.exe $subFolders[0] $subFolders[1] /mir");
+//            \exec("rsync -avz --delete {$subFolders[0]} {$subFolders[1]}");
         }
 
         Notification::title('Composer Copy Helper')
